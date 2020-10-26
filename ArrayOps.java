@@ -15,6 +15,20 @@ public class ArrayOps {
     System.out.println(arrA);
   }
 
+  public static void print2dArray(int[][] b) {
+      String arrB = "[ [";
+      for (int i = 0; i < b.length; i++) {
+         for (int j = 0; j < b[i].length; j++) {
+            if (i == 2 && j == 3) arrB += "] [";
+            if (i < b.length-1) arrB += b[i][j] + ", ";
+            else arrB += b[i][j];
+         }
+      }
+      arrB += "] ]";
+      System.out.print("\n");
+      System.out.println(arrB);
+    }
+
   public static int sum(int[] arr) {
     if (arr.length == 0) return 0;
     int sum = 0;
@@ -33,9 +47,13 @@ public class ArrayOps {
   }
 
   public static int[] sumRows(int[][] matrix) {
-    int[] a = new int[0];
-    return a;
-  }
+     int[] a = new int[matrix.length];
+     for (int i = 0; i < a.length; i++) {
+       int tempsum = sum(matrix[i]);
+       a[i] = tempsum;
+     }
+     return a;
+   }
 
   public static  int[] largestInRows(int[][] matrix) {
     int[] a = new int[0];
