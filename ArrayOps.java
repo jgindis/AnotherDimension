@@ -4,6 +4,17 @@ public class ArrayOps {
 
   }
 
+  public static void printArray(int[] a) {
+    String arrA = "[";
+    for (int i = 0; i < a.length; i++) {
+      if (i < a.length-1) arrA += a[i] + ", ";
+      else arrA += a[i];
+      }
+    arrA += "]";
+    System.out.print("\n");
+    System.out.println(arrA);
+  }
+
   public static int sum(int[] arr) {
     if (arr.length == 0) return 0;
     int sum = 0;
@@ -13,7 +24,7 @@ public class ArrayOps {
     return sum;
   }
 
-  public static  int largest(int[]arr) {
+  public static int largest(int[]arr) {
     int max = 0;
     for (int pos = 0; pos < arr.length; pos++) {
       if (arr[pos] > max) max = arr[pos];
