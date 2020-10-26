@@ -5,11 +5,7 @@ public class ArrayOps {
   }
 
   public static int sum(int[] arr) {
-    int sum = 0;
-    for (int pos = 0; pos < arr.length; pos++) {
-      sum += arr[pos];
-    }
-    return sum;
+    return 0;
   }
 
   public static  int largest(int[]arr) {
