@@ -15,7 +15,7 @@ public class ArrayOps {
     System.out.println(arrA);
   }
 
-  public static void print2dArray(int[][] b) {
+  public static void print2DArray(int[][] b) {
       String arrB = "[ [";
       for (int i = 0; i < b.length; i++) {
          for (int j = 0; j < b[i].length; j++) {
@@ -49,14 +49,18 @@ public class ArrayOps {
   public static int[] sumRows(int[][] matrix) {
      int[] a = new int[matrix.length];
      for (int i = 0; i < a.length; i++) {
-       int tempsum = sum(matrix[i]);
-       a[i] = tempsum;
+       int var = sum(matrix[i]);
+       a[i] = var;
      }
      return a;
    }
 
   public static  int[] largestInRows(int[][] matrix) {
-    int[] a = new int[0];
+    int a[] = new int[matrix.length];
+    for (int i = 0; i < a.length; i++) {
+      int var = largest(matrix[i]);
+      a[i] = var;
+    }
     return a;
   }
 
