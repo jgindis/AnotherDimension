@@ -89,11 +89,10 @@ public class ArrayOps {
 
   public static boolean isColMagic(int[][] matrix) {
     int[] a = sumCols(matrix);
-    for (int i = 0; i < arr.length-1; i++) {
+    for (int i = 0; i < a.length-1; i++) {
       if (a[i] != a[i+1]) return false;
     }
     return true;
-  }
   }
 
   public static boolean isLocationMagic(int[][] matrix, int row, int col) {
