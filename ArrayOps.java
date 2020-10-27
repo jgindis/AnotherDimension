@@ -80,7 +80,11 @@ public class ArrayOps {
   }
 
   public static boolean isRowMagic(int[][] matrix) {
-    return false;
+    int a[] = sumRows(matrix);
+    for (int i = 0; i < a.length-1; i++) {
+      if (a[i] != a[i+1]) return false;
+    }
+    return true;
   }
 
   public static boolean isColMagic(int[][] matrix) {
